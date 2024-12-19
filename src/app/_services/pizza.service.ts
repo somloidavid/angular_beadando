@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class PizzaServiceService {
+export class PizzaService {
   url = 'http://localhost:3000/pizzas';
 
   constructor(private http: HttpClient) { }

@@ -1,0 +1,19 @@
+div.button{
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    z-index: 1000;
+    background-color: #aaa;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    height: 4.5rem;
+    width: 4.5rem;
+    font-size: 3rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0.5rem;
+}

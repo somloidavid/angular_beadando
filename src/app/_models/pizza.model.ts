@@ -1,9 +1,9 @@
-import { Topping } from "./toppings.enum";
+import { Toppings } from "./toppings.enum";
 
 export interface Pizza {
     id: number;
     name: string;
-    toppings: Topping[];
+    toppings: Toppings[];
     price: number;
     image: string;
 }

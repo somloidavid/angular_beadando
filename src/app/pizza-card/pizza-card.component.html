@@ -1,0 +1,13 @@
+<div class="card">
+    <img [src]="pizza.image" [alt]="pizza.name">
+    <div class="card-body">
+        <p class="card-title">{{ pizza.name }}</p>
+        <hr>
+        @for (topping of pizza.toppings; track $index) {
+            @if ($index > 0) {
+                <span>, </span>
+            }
+            <span>{{ topping }}</span>
+        }
+    </div>
+</div>

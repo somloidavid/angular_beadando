@@ -1,4 +1,4 @@
-export enum Topping {
+export enum Toppings {
     TOMATO_SAUCE = "Tomato Sauce",
     MOZZARELLA = "Mozzarella",
     PEPPERONI = "Pepperoni",
