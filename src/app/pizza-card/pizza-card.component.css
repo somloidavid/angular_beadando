@@ -1,10 +1,27 @@
-.card{
+.card {
     width: 18rem;
     height: 21rem;
-
     border-radius: 0.5rem;
+    position: relative;
 }
 
-img{
+.image-container {
+    position: relative;
+}
+
+img {
     border-radius: 0.5rem 0.5rem 0 0;
+    width: 100%;
+    height: auto;
+}
+
+.button-overlay {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    display: none;
+}
+
+.image-container:hover .button-overlay {
+    display: block;
 }

@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-new-pizza-button',
@@ -9,9 +8,9 @@ import { Router } from '@angular/router';
   styleUrl: './new-pizza-button.component.css'
 })
 export class NewPizzaButtonComponent {
-  constructor(private router: Router) { }
+  @Output() newPizza: EventEmitter<void> = new EventEmitter<void>();
 
   onClick() {
-    this.router.navigate(['/new-pizza']);
+    this.newPizza.emit();
   }
 }

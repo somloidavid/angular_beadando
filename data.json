@@ -1,77 +1,77 @@
 {
-    "pizzas": [
-        {
-            "id": 1,
-            "name": "Margherita",
-            "toppings": [
-                "Tomato Sauce",
-                "Mozzarella",
-                "Basil"
-            ],
-            "price": 8.99,
-            "image": "https://www.donpepe.hu/storage/products/big/mapi_1.jpg"
-        },
-        {
-            "id": 2,
-            "name": "Pepperoni",
-            "toppings": [
-                "Tomato Sauce",
-                "Mozzarella",
-                "Pepperoni"
-            ],
-            "price": 9.99,
-            "image": "https://www.donpepe.hu/storage/products/big/szalpi_1.jpg"
-        },
-        {
-            "id": 3,
-            "name": "Vegetarian",
-            "toppings": [
-                "Tomato Sauce",
-                "Mozzarella",
-                "Mushrooms",
-                "Onions",
-                "Green Peppers"
-            ],
-            "price": 10.99,
-            "image": "https://www.donpepe.hu/storage/products/big/gftpi_2.jpg"
-        },
-        {
-            "id": 4,
-            "name": "Hawaiian",
-            "toppings": [
-                "Tomato Sauce",
-                "Mozzarella",
-                "Ham",
-                "Pineapple"
-            ],
-            "price": 11.99,
-            "image": "https://www.donpepe.hu/storage/products/big/hawpi_1.jpg"
-        },
-        {
-            "id": 5,
-            "name": "Meat Lovers",
-            "toppings": [
-                "Tomato Sauce",
-                "Mozzarella",
-                "Pepperoni",
-                "Sausage",
-                "Bacon"
-            ],
-            "price": 12.99,
-            "image": "https://www.donpepe.hu/storage/products/big/huhpi_1.jpg"
-        },
-        {
-            "id": 6,
-            "name": "BBQ Chicken",
-            "toppings": [
-                "BBQ Sauce",
-                "Mozzarella",
-                "Chicken",
-                "Red Onions",
-                "Cilantro"
-            ],
-            "price": 13.99,
-            "image": "https://www.donpepe.hu/storage/products/big/rapi_1.jpg"
-        }
-    ]
+  "pizzas": [
+    {
+      "id": "1",
+      "name": "Margherita",
+      "toppings": [
+        "Tomato Sauce",
+        "Mozzarella",
+        "Basil"
+      ],
+      "price": 8.99,
+      "image": "https://www.donpepe.hu/storage/products/big/mapi_1.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Pepperoni",
+      "toppings": [
+        "Tomato Sauce",
+        "Mozzarella",
+        "Pepperoni"
+      ],
+      "price": 9.99,
+      "image": "https://www.donpepe.hu/storage/products/big/szalpi_1.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Vegetarian",
+      "toppings": [
+        "Tomato Sauce",
+        "Mozzarella",
+        "Mushrooms",
+        "Onions",
+        "Green Peppers"
+      ],
+      "price": 10.99,
+      "image": "https://www.donpepe.hu/storage/products/big/gftpi_2.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Hawaiian",
+      "toppings": [
+        "Tomato Sauce",
+        "Mozzarella",
+        "Ham",
+        "Pineapple"
+      ],
+      "price": 11.99,
+      "image": "https://www.donpepe.hu/storage/products/big/hawpi_1.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Meat Lovers",
+      "toppings": [
+        "Tomato Sauce",
+        "Mozzarella",
+        "Pepperoni",
+        "Sausage",
+        "Bacon"
+      ],
+      "price": 12.99,
+      "image": "https://www.donpepe.hu/storage/products/big/huhpi_1.jpg"
+    },
+    {
+      "id": "6",
+      "name": "BBQ Chicken",
+      "toppings": [
+        "BBQ Sauce",
+        "Mozzarella",
+        "Chicken",
+        "Red Onions",
+        "Cilantro"
+      ],
+      "price": 13.99,
+      "image": "https://www.donpepe.hu/storage/products/big/rapi_1.jpg"
+    }
+  ]
 }

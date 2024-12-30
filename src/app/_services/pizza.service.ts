@@ -1,13 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Pizza } from '../_models/pizza.model';
-import { Observable } from 'rxjs';
+import { Observable, Subject, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PizzaService {
   url = 'http://localhost:3000/pizzas';
+
+  private pizzasUpdated = new Subject<void>();
 
   constructor(private http: HttpClient) { }
 
@@ -16,14 +18,31 @@ export class PizzaService {
   }
 
   addPizza(pizza: Pizza): Observable<Pizza> {
-    return this.http.post<Pizza>(this.url, pizza);
+    return this.http.post<Pizza>(this.url, pizza).pipe(
+      tap(() => this.pizzasUpdated.next())
+    );
   }
 
   updatePizza(pizza: Pizza): Observable<Pizza> {
-    return this.http.patch<Pizza>(`${this.url}/${pizza.id}`, pizza);
+    return this.http.patch<Pizza>(`${this.url}/${pizza.id}`, pizza).pipe(
+      tap(() => this.pizzasUpdated.next())
+    );
   }
 
   deletePizza(id: number): Observable<Pizza> {
     return this.http.delete<Pizza>(`${this.url}/${id}`);
+  }
+
+  getPizzasUpdatedListener(): Observable<void> {
+    return this.pizzasUpdated.asObservable();
+  }
+
+  static emptyPizza(): Pizza {
+    return {
+      name: '',
+      price: '',
+      toppings: [],
+      image: ''
+    };
   }
 }

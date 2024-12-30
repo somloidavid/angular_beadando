@@ -15,3 +15,7 @@ export enum Toppings {
     CILANTRO = "Cilantro",
     BASIL = "Basil"
 }
+
+export function getToppings(): Toppings[] {
+    return Object.values(Toppings);
+}

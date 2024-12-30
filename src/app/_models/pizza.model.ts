@@ -1,9 +1,9 @@
 import { Toppings } from "./toppings.enum";
 
 export interface Pizza {
-    id: number;
+    id?: number;
     name: string;
     toppings: Toppings[];
-    price: number;
+    price: string;
     image: string;
 }

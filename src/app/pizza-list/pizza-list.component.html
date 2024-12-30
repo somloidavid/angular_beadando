@@ -1,5 +1,6 @@
 <div class="container">
     @for (pizza of pizzas; track $index) {
-        <app-pizza-card [pizza]="pizza"></app-pizza-card>
+    <app-pizza-card [pizza]="pizza" (edit)="onEdit($event)" (delete)="onDelete($event)">
+    </app-pizza-card>
     }
 </div>

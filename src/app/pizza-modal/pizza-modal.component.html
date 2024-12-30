@@ -1,0 +1,46 @@
+<!-- src/app/pizza-modal/pizza-modal.component.html -->
+<div class="modal fade" id="pizzaModal" tabindex="-1" aria-labelledby="pizzaModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Enter Pizza Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                    (click)="cancel()"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" [value]="pizza.name"
+                            (input)="pizza.name = getValue($event)">
+                    </div>
+                    <div class="mb-3">
+                        <label for="price" class="form-label">Price</label>
+                        <input type="number" class="form-control" id="price" [value]="pizza.price"
+                            (input)="pizza.price = getValue($event)">
+                    </div>
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Image URL</label>
+                        <input type="text" class="form-control" id="image" [value]="pizza.image"
+                            (input)="pizza.image = getValue($event)">
+                    </div>
+                    <div class="mb-3">
+                        <label for="toppings" class="form-label">Toppings</label>
+                        <div *ngFor="let topping of toppings" class="form-check">
+                            <input class="form-check-input" type="checkbox" [id]="topping" [value]="topping"
+                                (change)="onToppingChange($event, topping)"
+                                [checked]="pizza.toppings.includes(topping)">
+                            <label class="form-check-label" [for]="topping">
+                                {{ topping }}
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button (click)="cancel()" type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                <button (click)="save()" type="button" class="btn btn-success">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

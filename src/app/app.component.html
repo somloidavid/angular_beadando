@@ -1,3 +1,7 @@
 <h1>Pizzas</h1>
-<app-pizza-list></app-pizza-list>
-<app-new-pizza-button></app-new-pizza-button>
+<app-pizza-list (edit)="editPizza($event)"></app-pizza-list>
+<app-new-pizza-button (newPizza)="onNewPizzaClick()"></app-new-pizza-button>
+
+@if (showModal) {
+    <app-pizza-modal [pizza]="selectedPizza" (saved)="save($event)" (cancelled)="cancel()"></app-pizza-modal>
+}

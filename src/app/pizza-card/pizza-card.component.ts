@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Pizza } from '../_models/pizza.model';
 
 @Component({
@@ -6,8 +6,18 @@ import { Pizza } from '../_models/pizza.model';
   standalone: true,
   imports: [],
   templateUrl: './pizza-card.component.html',
-  styleUrl: './pizza-card.component.css'
+  styleUrls: ['./pizza-card.component.css']
 })
 export class PizzaCardComponent {
   @Input() pizza!: Pizza;
+  @Output() edit = new EventEmitter<Pizza>();
+  @Output() delete = new EventEmitter<Pizza>();
+
+  onEdit() {
+    this.edit.emit(this.pizza);
+  }
+
+  onDelete() {
+    this.delete.emit(this.pizza);
+  }
 }
