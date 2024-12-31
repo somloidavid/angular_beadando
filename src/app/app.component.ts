@@ -1,4 +1,3 @@
-// src/app/app.component.ts
 import { Component } from '@angular/core';
 import { PizzaListComponent } from "./pizza-list/pizza-list.component";
 import { NewPizzaButtonComponent } from "./new-pizza-button/new-pizza-button.component";

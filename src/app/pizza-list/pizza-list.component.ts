@@ -1,4 +1,3 @@
-// src/app/pizza-list/pizza-list.component.ts
 import { Component, OnInit, OnDestroy, output, Output, EventEmitter } from '@angular/core';
 import { PizzaService } from '../_services/pizza.service';
 import { Pizza } from '../_models/pizza.model';
